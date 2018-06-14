@@ -27,7 +27,11 @@ public class thirdPersonCamera : MonoBehaviour {
         Vector3 movementVec = new Vector3(Input.GetAxis("Horizontal") * speed, 0f, Input.GetAxis("Vertical")*speed);
         transform.eulerAngles = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
         //rb.AddRelativeForce(movementVec*10f);
-        rb.velocity = (transform.forward * Input.GetAxis("Vertical") * Time.deltaTime * speed) + (transform.right * Input.GetAxis("Horizontal") * Time.deltaTime * speed);
+
+        Vector3 rightMovement = transform.right * Input.GetAxis("Horizontal") * speed;
+        Vector3 frontMovement = transform.forward * Input.GetAxis("Vertical") * speed;
+
+        rb.velocity = rightMovement + frontMovement;
         print(transform.forward * Input.GetAxis("Vertical") * Time.deltaTime * speed);
     }
 	private void LateUpdate()
