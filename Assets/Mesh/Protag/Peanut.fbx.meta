@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: b87ed531846cc494cb0e9cf0a7d83f75
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: group
+    100002: group1
+    100004: group2
+    100006: group2_pasted__pCone1
+    100008: group3
+    100010: group4
+    100012: group4_pasted__pCone1
+    100014: group5
+    100016: pasted__pCone1
+    100018: pasted__pCone1 1
+    100020: pasted__pCone1 2
+    100022: pasted__pCone1 3
+    100024: pasted__pPlane3
+    100026: pasted__pPlane3 1
+    100028: pasted__pPlane4
+    100030: pasted__pSphere1
+    100032: pCone1
+    100034: pCube1
+    100036: //RootNode
+    100038: pPlane1
+    100040: pPlane2
+    100042: pPlane3
+    100044: pPlane4
+    100046: pPlane5
+    100048: pSphere1
+    100050: transform1
+    100052: transform10
+    100054: transform11
+    100056: transform12
+    100058: transform13
+    100060: transform14
+    100062: transform2
+    100064: transform3
+    100066: transform4
+    100068: transform5
+    100070: transform6
+    100072: transform7
+    100074: transform8
+    100076: transform9
+    400000: group
+    400002: group1
+    400004: group2
+    400006: group2_pasted__pCone1
+    400008: group3
+    400010: group4
+    400012: group4_pasted__pCone1
+    400014: group5
+    400016: pasted__pCone1
+    400018: pasted__pCone1 1
+    400020: pasted__pCone1 2
+    400022: pasted__pCone1 3
+    400024: pasted__pPlane3
+    400026: pasted__pPlane3 1
+    400028: pasted__pPlane4
+    400030: pasted__pSphere1
+    400032: pCone1
+    400034: pCube1
+    400036: //RootNode
+    400038: pPlane1
+    400040: pPlane2
+    400042: pPlane3
+    400044: pPlane4
+    400046: pPlane5
+    400048: pSphere1
+    400050: transform1
+    400052: transform10
+    400054: transform11
+    400056: transform12
+    400058: transform13
+    400060: transform14
+    400062: transform2
+    400064: transform3
+    400066: transform4
+    400068: transform5
+    400070: transform6
+    400072: transform7
+    400074: transform8
+    400076: transform9
+    2100000: lambert3
+    2100002: pasted__lambert3
+    2100004: lambert4
+    2100006: lambert1
+    2300000: group2_pasted__pCone1
+    2300002: pasted__pSphere1
+    2300004: pPlane5
+    2300006: pSphere1
+    3300000: group2_pasted__pCone1
+    3300002: pasted__pSphere1
+    3300004: pPlane5
+    3300006: pSphere1
+    4300000: pSphere1
+    4300002: pasted__pSphere1
+    4300004: group2_pasted__pCone1
+    4300006: pPlane5
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
