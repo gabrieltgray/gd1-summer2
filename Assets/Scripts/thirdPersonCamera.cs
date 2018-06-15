@@ -18,8 +18,11 @@ public class thirdPersonCamera : MonoBehaviour {
 	void Start () {
         isGrounded = true;
         rb = GetComponent<Rigidbody>();
+
         //offset respresents the x, y, and z coordinates of the position of the camera
-        offset = new Vector3(transform.position.x-1f, transform.position.y + 1.0f, transform.position.z + 1.0f);
+        offset = new Vector3(2f, 
+                             1.6f,
+                             2f);
     }
 	
 	// Update is called once per frame
@@ -63,14 +66,12 @@ public class thirdPersonCamera : MonoBehaviour {
     float lastVelocity = 0;
 	void moveCamera(){
 
-        //if(!isGrounded){
-        //    return;
-        //}
+
         //angle axis rotates a vector3 around an axis
 
         //need to multiply by offset so it returns a vector3
         offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * offset;
-
+        print(transform.position);
         //offset += (offset * (lastVelocity - rb.velocity.magnitude))/30f;
 
         //lerp to offset + (offset *some modifier)
