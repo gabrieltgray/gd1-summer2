@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33868892715956454}
   - component: {fileID: 23099626859297718}
   - component: {fileID: 136558670579753988}
-  - component: {fileID: 114567981798677366}
   - component: {fileID: 114421240276778972}
   - component: {fileID: 54447097285323350}
   m_Layer: 0
@@ -38,13 +37,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1814284100141500}
-  m_LocalRotation: {x: -0.35355338, y: -0.35355338, z: -0.1464466, w: 0.8535535}
-  m_LocalPosition: {x: 4.2745442, y: 7.51, z: -7.5464363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3229289, y: 0.24205422, z: 0.6857028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -45, y: -45, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23099626859297718
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -86,7 +85,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1814284100141500}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &54447097285323350
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -100,7 +99,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 48
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &114421240276778972
 MonoBehaviour:
@@ -114,21 +113,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrust: 10
-  spinSpeed: 5
+  spinSpeed: 0
   launchAngle: 45
   rb: {fileID: 54447097285323350}
---- !u!114 &114567981798677366
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1814284100141500}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43d4058228c6dbe429e3e935b8658e5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spinSpeed: 10
 --- !u!136 &136558670579753988
 CapsuleCollider:
   m_ObjectHideFlags: 1

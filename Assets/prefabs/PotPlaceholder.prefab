@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33275742246699044}
   - component: {fileID: 23145357168164684}
   - component: {fileID: 135691205741364646}
-  - component: {fileID: 114179117984666206}
   - component: {fileID: 114563183788723786}
   - component: {fileID: 54519521407005918}
   m_Layer: 0
@@ -38,13 +37,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1717489569943436}
-  m_LocalRotation: {x: -0.35355338, y: -0.35355338, z: -0.1464466, w: 0.8535535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3229289, y: 0.24205422, z: 0.6857028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -45, y: -45, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23145357168164684
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -100,20 +99,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 48
+  m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114179117984666206
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1717489569943436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43d4058228c6dbe429e3e935b8658e5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spinSpeed: 10
 --- !u!114 &114563183788723786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrust: 10
-  spinSpeed: 5
+  spinSpeed: 0
   launchAngle: 45
   rb: {fileID: 0}
 --- !u!135 &135691205741364646
