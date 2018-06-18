@@ -12,31 +12,40 @@ MonoBehaviour:
   m_Name: ProBuilderPreferences
   m_EditorClassIdentifier: 
   m_Bool_keys:
-  - pbFillHoleSelectsEntirePath
-  - pb_SmoothingGroupEditor::m_DrawNormals
-  - pb_SmoothingGroupEditor::m_ShowPreview
-  - pb_SmoothingGroupEditor::m_PreviewDither
+  - pbStripProBuilderOnBuild
+  - pbDisableAutoUV2Generation
+  - pbForceConvex
+  - pbMeshesAreAssets
+  - pb_UVTemplate_transparentBackground
+  - pb_UVTemplate_hideGrid
   m_Int_keys:
-  - pbHandleAlignment
   - pbDefaultEditLevel
   - pbDefaultSelectionMode
+  - pbHandleAlignment
+  - pbDefaultCollider
+  - pbShadowCastingMode
+  - pbDefaultStaticFlags
   - pb_GIWorkflowMode
-  - pbDragSelectMode
+  - pb_UVTemplate_imageSize
   m_Float_keys:
-  - pb_SmoothingGroupEditor::m_NormalsSize
-  - pb_SmoothingGroupEditor::m_PreviewOpacity
   - pbEditorScroll.x
   - pbEditorScroll.y
-  m_String_keys: []
+  m_String_keys:
+  - pbCurrentMaterialPalette
+  - pb_UVTemplate_lineColor
+  - pb_UVTemplate_backgroundColor
   m_Color_keys: []
-  m_Material_keys: []
-  m_Bool_values: 00010100
-  m_Int_values: 0000000001000000020000000000000000000000
+  m_Material_keys:
+  - pbDefaultMaterial
+  m_Bool_values: 010100000101
+  m_Int_values: 0100000002000000000000000200000002000000000000000000000000040000
   m_Float_values:
-  - 0.001
-  - 0.415
   - 0
-  - 339
-  m_String_values: []
+  - 0
+  m_String_values:
+  - Assets/ProBuilder Data/Default Material Palette.asset
+  - RGBA(0.000, 1.000, 0.000, 1.000)
+  - RGBA(0.000, 0.000, 0.000, 1.000)
   m_Color_values: []
-  m_Material_values: []
+  m_Material_values:
+  - {fileID: 2100000, guid: f8af10ae2c674e569782e57b09c76a13, type: 2}
