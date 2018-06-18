@@ -46,8 +46,9 @@ public class thirdPersonCamera : MonoBehaviour {
         rightMovement = transform.right * Input.GetAxis("Horizontal") * speed;
         frontMovement = transform.forward * Input.GetAxis("Vertical") * speed;
 
-        print("front movement: " + frontMovement.magnitude * Mathf.Sign(frontMovement.x));
-        print("right movement: " + rightMovement.magnitude * Mathf.Sign(rightMovement.x));
+
+        print("rb velocity: " + transform.InverseTransformDirection(rb.velocity));
+
         Vector3 yMovement = new Vector3(0f, rb.velocity.y, 0f);
 
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
