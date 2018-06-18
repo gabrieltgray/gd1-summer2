@@ -44,7 +44,7 @@ public class thirdPersonCamera : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
             isGrounded = false;
-            yMovement += new Vector3(0, 20f, 0);
+            yMovement += new Vector3(0, jumpHeight, 0);
 
         }
 

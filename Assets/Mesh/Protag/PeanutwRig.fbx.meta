@@ -1,49 +1,67 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: bd6c1e88bfb260f44bf46ed3c270175f
-=======
-guid: 754e1fc8b2b884e748f9f55a0b7557ea
->>>>>>> 114a06fb2a00e4d99fb7ac9764a3260e41da2b0b
+guid: 956121c763a8a4380b20083a608d4bbe
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Back_Hips
     100002: Bottom_Jaw
     100004: Front_of_body
-    100006: Left_Back_Foot
-    100008: Left_Front_Elbow
-    100010: Left_Front_Foot
-    100012: Left_Front_Shoulder
-    100014: Left_Knee
-    100016: Left_Thigh
-    100018: Right_Back_Foot
-    100020: Right_Front_Elbow
-    100022: Right_Front_Foot
-    100024: Right_Front_Shoulder
-    100026: Right_Knee
-    100028: Right_Thigh
-    100030: //RootNode
-    100032: Top_Jaw
-    100034: Waist
+    100006: group1
+    100008: group2_pasted__pCone1
+    100010: Left_Back_Foot
+    100012: Left_Front_Elbow
+    100014: Left_Front_Foot
+    100016: Left_Front_Shoulder
+    100018: Left_Knee
+    100020: Left_Thigh
+    100022: pasted__pSphere1
+    100024: //RootNode
+    100026: pPlane5
+    100028: pSphere1
+    100030: Right_Back_Foot
+    100032: Right_Front_Elbow
+    100034: Right_Front_Foot
+    100036: Right_Front_Shoulder
+    100038: Right_Knee
+    100040: Right_Thigh
+    100042: Top_Jaw
+    100044: Waist
     400000: Back_Hips
     400002: Bottom_Jaw
     400004: Front_of_body
-    400006: Left_Back_Foot
-    400008: Left_Front_Elbow
-    400010: Left_Front_Foot
-    400012: Left_Front_Shoulder
-    400014: Left_Knee
-    400016: Left_Thigh
-    400018: Right_Back_Foot
-    400020: Right_Front_Elbow
-    400022: Right_Front_Foot
-    400024: Right_Front_Shoulder
-    400026: Right_Knee
-    400028: Right_Thigh
-    400030: //RootNode
-    400032: Top_Jaw
-    400034: Waist
+    400006: group1
+    400008: group2_pasted__pCone1
+    400010: Left_Back_Foot
+    400012: Left_Front_Elbow
+    400014: Left_Front_Foot
+    400016: Left_Front_Shoulder
+    400018: Left_Knee
+    400020: Left_Thigh
+    400022: pasted__pSphere1
+    400024: //RootNode
+    400026: pPlane5
+    400028: pSphere1
+    400030: Right_Back_Foot
+    400032: Right_Front_Elbow
+    400034: Right_Front_Foot
+    400036: Right_Front_Shoulder
+    400038: Right_Knee
+    400040: Right_Thigh
+    400042: Top_Jaw
+    400044: Waist
+    2100000: lambert3
+    2100002: pasted__lambert3
+    2100004: Default_Material
+    2100006: lambert1
+    4300000: pSphere1
+    4300002: pasted__pSphere1
+    4300004: group2_pasted__pCone1
+    4300006: pPlane5
     9500000: //RootNode
+    13700000: group2_pasted__pCone1
+    13700002: pasted__pSphere1
+    13700004: pPlane5
+    13700006: pSphere1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -75,7 +93,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
