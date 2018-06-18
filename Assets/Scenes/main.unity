@@ -118,7 +118,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-34710
+  m_Name: pb_Mesh-222438
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -5729,11 +5729,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4223443151766896, guid: 8357990c091747d43931403a0f58bae8,
     type: 2}
   m_PrefabInternal: {fileID: 1030095246}
---- !u!4 &1030941176 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4029556741808994, guid: 13fb8cd6766eb4f4c8ca7313a9cd7c2c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1976293923}
 --- !u!1001 &1038020818
 Prefab:
   m_ObjectHideFlags: 0
@@ -10033,59 +10028,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4701443313723714, guid: c7dd68abb70caff40a7c19f6b87df8f3,
     type: 2}
   m_PrefabInternal: {fileID: 1798515178}
---- !u!1 &1811693604
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1811693605}
-  - component: {fileID: 1811693607}
-  - component: {fileID: 1811693606}
-  m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1811693605
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1811693604}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.9, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
-  m_Children: []
-  m_Father: {fileID: 1030941176}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1811693606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1811693604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c46d0b79f314477183c8c4389cee9c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!135 &1811693607
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1811693604}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!43 &1845885984
 Mesh:
   m_ObjectHideFlags: 0
@@ -10485,11 +10427,6 @@ Prefab:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1600355835}
-    - target: {fileID: 54128676399585738, guid: 13fb8cd6766eb4f4c8ca7313a9cd7c2c,
-        type: 2}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13fb8cd6766eb4f4c8ca7313a9cd7c2c, type: 2}
   m_IsPrefabParent: 0
