@@ -18,4 +18,8 @@ public class groundedCollision : MonoBehaviour {
 	{
         transform.parent.GetComponent<thirdPersonCamera>().isGrounded = true;
 	}
+	private void OnTriggerExit(Collider other)
+	{
+        transform.parent.GetComponent<thirdPersonCamera>().isGrounded = false;
+	}
 }
