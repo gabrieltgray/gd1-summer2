@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: d256f89652e203e419b5684f46c00342
+guid: 37cbed40644ae4f6e89092de3a57b816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Back_Hips
     100002: Bottom_Jaw
     100004: Front_of_body
-    100006: //RootNode
-    100008: Left_Back_Foot
-    100010: Left_Front_Elbow
-    100012: Left_Front_Foot
-    100014: Left_Front_Shoulder
-    100016: Left_Knee
-    100018: Left_Thigh
+    100006: Left_Back_Foot
+    100008: Left_Front_Elbow
+    100010: Left_Front_Foot
+    100012: Left_Front_Shoulder
+    100014: Left_Knee
+    100016: Left_Thigh
+    100018: //RootNode
     100020: Right_Back_Foot
     100022: Right_Front_Elbow
     100024: Right_Front_Foot
@@ -24,13 +24,13 @@ ModelImporter:
     400000: Back_Hips
     400002: Bottom_Jaw
     400004: Front_of_body
-    400006: //RootNode
-    400008: Left_Back_Foot
-    400010: Left_Front_Elbow
-    400012: Left_Front_Foot
-    400014: Left_Front_Shoulder
-    400016: Left_Knee
-    400018: Left_Thigh
+    400006: Left_Back_Foot
+    400008: Left_Front_Elbow
+    400010: Left_Front_Foot
+    400012: Left_Front_Shoulder
+    400014: Left_Knee
+    400016: Left_Thigh
+    400018: //RootNode
     400020: Right_Back_Foot
     400022: Right_Front_Elbow
     400024: Right_Front_Foot
