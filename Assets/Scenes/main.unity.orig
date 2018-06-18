@@ -118,7 +118,11 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
+  m_Name: pb_Mesh-222438
+=======
   m_Name: pb_Mesh-439058
+>>>>>>> 00766030f61875cbdc37aecd9b7b2cada8c2a87f
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -5467,10 +5471,31 @@ Prefab:
       propertyPath: m_SelectedEdges.Array.data[75].y
       value: 74
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8357990c091747d43931403a0f58bae8, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1030095247 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4223443151766896, guid: 8357990c091747d43931403a0f58bae8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1030095246}
+--- !u!1001 &1038020818
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 198298737}
+    m_Modifications:
+    - target: {fileID: 4701443313723714, guid: c7dd68abb70caff40a7c19f6b87df8f3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 159.56828
+=======
     - target: {fileID: 114544541117360256, guid: 8357990c091747d43931403a0f58bae8,
         type: 2}
       propertyPath: m_SelectedEdges.Array.data[76].x
       value: 76
+>>>>>>> 00766030f61875cbdc37aecd9b7b2cada8c2a87f
       objectReference: {fileID: 0}
     - target: {fileID: 114544541117360256, guid: 8357990c091747d43931403a0f58bae8,
         type: 2}
@@ -15978,6 +16003,8 @@ Transform:
   m_PrefabParentObject: {fileID: 4701443313723714, guid: c7dd68abb70caff40a7c19f6b87df8f3,
     type: 2}
   m_PrefabInternal: {fileID: 1798515178}
+<<<<<<< HEAD
+=======
 --- !u!1 &1811693604
 GameObject:
   m_ObjectHideFlags: 0
@@ -16031,6 +16058,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+>>>>>>> 00766030f61875cbdc37aecd9b7b2cada8c2a87f
 --- !u!43 &1845885984
 Mesh:
   m_ObjectHideFlags: 0
@@ -16434,11 +16462,6 @@ Prefab:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1600355835}
-    - target: {fileID: 54128676399585738, guid: 13fb8cd6766eb4f4c8ca7313a9cd7c2c,
-        type: 2}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13fb8cd6766eb4f4c8ca7313a9cd7c2c, type: 2}
   m_IsPrefabParent: 0
