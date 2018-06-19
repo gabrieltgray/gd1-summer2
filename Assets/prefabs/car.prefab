@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wayPointList:
-  - {fileID: 0}
+  - {fileID: 4232991475037276, guid: d60abbf1d15d7e1418eff2509dbb02b5, type: 2}
   - {fileID: 0}
   car: {fileID: 1104091521418212}
   currentWayPoint: 0
