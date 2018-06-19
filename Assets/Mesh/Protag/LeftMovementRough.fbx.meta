@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: a09a38caf275e9e41bd3a4e768643f30
+guid: cc530d8fee1cc4bd5983a7e3dd842223
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Back_Hips
     100002: Bottom_Jaw
     100004: Front_of_body
-    100006: //RootNode
-    100008: Left_Back_Foot
-    100010: Left_Front_Elbow
-    100012: Left_Front_Foot
-    100014: Left_Front_Shoulder
-    100016: Left_Knee
-    100018: Left_Thigh
+    100006: Left_Back_Foot
+    100008: Left_Front_Elbow
+    100010: Left_Front_Foot
+    100012: Left_Front_Shoulder
+    100014: Left_Knee
+    100016: Left_Thigh
+    100018: //RootNode
     100020: Right_Back_Foot
     100022: Right_Front_Elbow
     100024: Right_Front_Foot
@@ -24,13 +24,13 @@ ModelImporter:
     400000: Back_Hips
     400002: Bottom_Jaw
     400004: Front_of_body
-    400006: //RootNode
-    400008: Left_Back_Foot
-    400010: Left_Front_Elbow
-    400012: Left_Front_Foot
-    400014: Left_Front_Shoulder
-    400016: Left_Knee
-    400018: Left_Thigh
+    400006: Left_Back_Foot
+    400008: Left_Front_Elbow
+    400010: Left_Front_Foot
+    400012: Left_Front_Shoulder
+    400014: Left_Knee
+    400016: Left_Thigh
+    400018: //RootNode
     400020: Right_Back_Foot
     400022: Right_Front_Elbow
     400024: Right_Front_Foot
@@ -68,7 +68,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
