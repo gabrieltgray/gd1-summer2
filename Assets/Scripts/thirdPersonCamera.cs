@@ -8,10 +8,14 @@ public class thirdPersonCamera : MonoBehaviour {
     private float speed;
     [SerializeField]
     private float cursorSpeed;
-    private Vector3 offset;
+    public Vector3 offset;
     private Rigidbody rb;
     public float gravity = 9.81f;
     public float jumpHeight;
+    public float turnSpeed;
+
+    public Vector3 frontMovement;
+    public Vector3 rightMovement;
 
     public bool isGrounded;
 	// Use this for initialization
@@ -20,9 +24,9 @@ public class thirdPersonCamera : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
 
         //offset respresents the x, y, and z coordinates of the position of the camera
-        offset = new Vector3(2f, 
-                             1.6f,
-                             2f);
+        //offset = new Vector3(2f, 
+                             //1.6f,
+                             //2f);
     }
 	
 	// Update is called once per frame
@@ -32,30 +36,34 @@ public class thirdPersonCamera : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
+
         Vector3 movementVec = new Vector3(Input.GetAxis("Horizontal") * speed, 0f, Input.GetAxis("Vertical")*speed);
-        transform.eulerAngles = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
+        //transform.eulerAngles = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
+        Vector3 targetAngle = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
+        float directionFace = Mathf.LerpAngle(transform.eulerAngles.y, targetAngle.y, Time.deltaTime * turnSpeed);
+        transform.eulerAngles = new Vector3(0f, directionFace, 0f);
         //rb.AddRelativeForce(movementVec*10f);
+        rightMovement = transform.right * Input.GetAxis("Horizontal") * speed;
+        frontMovement = transform.forward * Input.GetAxis("Vertical") * speed;
 
-        Vector3 rightMovement = transform.right * Input.GetAxis("Horizontal") * speed;
-        Vector3 frontMovement = transform.forward * Input.GetAxis("Vertical") * speed;
 
+        print("rb velocity: " + transform.InverseTransformDirection(rb.velocity));
 
         Vector3 yMovement = new Vector3(0f, rb.velocity.y, 0f);
 
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
             isGrounded = false;
-            yMovement += new Vector3(0, 20f, 0);
+            yMovement += new Vector3(0, jumpHeight, 0);
 
         }
 
 
 
         if(!isGrounded){
-            yMovement -= new Vector3(0, 1f, 0);
+            yMovement -= new Vector3(0, 0.5f, 0);
 
 
         }
-        print(rb.velocity.y);
         rb.velocity = (rightMovement + frontMovement + yMovement);
     }
 	private void LateUpdate()
@@ -71,7 +79,6 @@ public class thirdPersonCamera : MonoBehaviour {
 
         //need to multiply by offset so it returns a vector3
         offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * offset;
-        print(transform.position);
         //offset += (offset * (lastVelocity - rb.velocity.magnitude))/30f;
 
         //lerp to offset + (offset *some modifier)
