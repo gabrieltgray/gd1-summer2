@@ -34,3 +34,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Mesh/Protag/LeftPivot.fbx.meta
+Assets/Mesh/Protag/RightPivot.fbx.meta
