@@ -18,6 +18,9 @@ public class thirdPersonCamera : MonoBehaviour {
     public Vector3 rightMovement;
 
     public bool isGrounded;
+    private Vector3 yMovement;
+    Vector3 initialOffset;
+    bool newCameraPos = false;
 	// Use this for initialization
 	void Start () {
         isGrounded = true;
@@ -31,7 +34,14 @@ public class thirdPersonCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        yMovement = new Vector3(0f, rb.velocity.y, 0f);
+
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        {
+            isGrounded = false;
+            yMovement += new Vector3(0, jumpHeight, 0);
+
+        }
 	}
 
 	private void FixedUpdate()
@@ -43,27 +53,18 @@ public class thirdPersonCamera : MonoBehaviour {
         float directionFace = Mathf.LerpAngle(transform.eulerAngles.y, targetAngle.y, Time.deltaTime * turnSpeed);
         transform.eulerAngles = new Vector3(0f, directionFace, 0f);
         //rb.AddRelativeForce(movementVec*10f);
-        rightMovement = transform.right * Input.GetAxis("Horizontal") * speed;
+        rightMovement = transform.right * Input.GetAxis("Horizontal") * speed/2f;
         frontMovement = transform.forward * Input.GetAxis("Vertical") * speed;
 
 
-        print("rb velocity: " + transform.InverseTransformDirection(rb.velocity));
 
-        Vector3 yMovement = new Vector3(0f, rb.velocity.y, 0f);
-
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
-            isGrounded = false;
-            yMovement += new Vector3(0, jumpHeight, 0);
-
-        }
 
 
 
         if(!isGrounded){
             yMovement -= new Vector3(0, 0.5f, 0);
-
-
         }
+
         rb.velocity = (rightMovement + frontMovement + yMovement);
     }
 	private void LateUpdate()
@@ -78,18 +79,33 @@ public class thirdPersonCamera : MonoBehaviour {
         //angle axis rotates a vector3 around an axis
 
         //need to multiply by offset so it returns a vector3
+        //multiplying a quaternion by a vector 3 is actually just applying the rotation to the vector3
+
         offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * offset;
-        //offset += (offset * (lastVelocity - rb.velocity.magnitude))/30f;
 
         //lerp to offset + (offset *some modifier)
         //when you release lerp back to the base offset, i.e. offset / the current modifier
+
+
+        if (newCameraPos && offset.magnitude - initialOffset.magnitude<10f){
+            offset *= 1.01f;
+
+        }
+
+
         mainCamera.transform.position = transform.position + offset;
         mainCamera.transform.LookAt(transform.position);
-        lastVelocity = rb.velocity.magnitude;
-
 
 
     }
 
-	
+
+	private void OnTriggerEnter(Collider other)
+	{
+        if(other.gameObject.tag == "potAreaBegin"){
+            initialOffset = offset;
+            newCameraPos = true;
+        }
+	}
+
 }
