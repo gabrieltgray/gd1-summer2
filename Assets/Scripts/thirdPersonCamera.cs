@@ -132,4 +132,9 @@ public class thirdPersonCamera : MonoBehaviour {
 
 	}
 
+	public void StopPeanut(){
+		speed = 0;
+		jumpHeight = 0;
+	}
+
 }
