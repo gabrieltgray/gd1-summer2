@@ -766,8 +766,10 @@ MonoBehaviour:
   cursorSpeed: 5
   offset: {x: 3, y: 2, z: 3}
   gravity: 9.81
-  jumpHeight: 30
-  turnSpeed: 0
+  jumpHeight: 15
+  turnSpeed: 5
+  frontMovement: {x: 0, y: 0, z: 0}
+  rightMovement: {x: 0, y: 0, z: 0}
   isGrounded: 0
 --- !u!114 &114932428033443096
 MonoBehaviour:
