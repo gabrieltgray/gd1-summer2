@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 4348070107997450}
   - component: {fileID: 137759150954165768}
   m_Layer: 0
-  m_Name: body
+  m_Name: pPlane5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -766,8 +766,8 @@ MonoBehaviour:
   cursorSpeed: 5
   offset: {x: 3, y: 2, z: 3}
   gravity: 9.81
-  jumpHeight: 30
-  turnSpeed: 10
+  jumpHeight: 15
+  turnSpeed: 5
   frontMovement: {x: 0, y: 0, z: 0}
   rightMovement: {x: 0, y: 0, z: 0}
   isGrounded: 0
@@ -991,7 +991,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: bfdebe4355ccd45ce9195a7a02d82457, type: 2}
+  - {fileID: 2100006, guid: ee66563f76ebdb842976d678c486355b, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
