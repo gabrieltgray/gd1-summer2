@@ -49,11 +49,13 @@ public class thirdPersonCamera : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
+        
 
         Vector3 movementVec = new Vector3(Input.GetAxis("Horizontal") * speed, 0f, Input.GetAxis("Vertical")*speed);
         //transform.eulerAngles = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
         Vector3 targetAngle = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
         float directionFace = Mathf.LerpAngle(transform.eulerAngles.y, targetAngle.y, Time.deltaTime * turnSpeed);
+        print(directionFace);
         transform.eulerAngles = new Vector3(0f, directionFace, 0f);
         //rb.AddRelativeForce(movementVec*10f);
         rightMovement = transform.right * Input.GetAxis("Horizontal") * speed/2f;
