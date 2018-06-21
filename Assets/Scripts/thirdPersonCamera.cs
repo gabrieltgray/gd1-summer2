@@ -20,12 +20,15 @@ public class thirdPersonCamera : MonoBehaviour {
     public bool isGrounded;
     private Vector3 yMovement;
     Vector3 initialOffset;
-    bool newCameraPos = false;
+    bool potCam = false;
+    bool carCam = false;
+    bool defaultCam = false;
+    public List<GameObject> cameraLocations; 
 	// Use this for initialization
 	void Start () {
         isGrounded = true;
         rb = GetComponent<Rigidbody>();
-
+        initialOffset = offset;
         //offset respresents the x, y, and z coordinates of the position of the camera
         //offset = new Vector3(2f, 
                              //1.6f,
@@ -87,10 +90,25 @@ public class thirdPersonCamera : MonoBehaviour {
         //when you release lerp back to the base offset, i.e. offset / the current modifier
 
 
-        if (newCameraPos && offset.magnitude - initialOffset.magnitude<10f){
-            offset *= 1.01f;
+        //if (potCam ){
+        //    initialOffset = (Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * initialOffset);
+            
+        //    offset = Vector3.Lerp(offset, initialOffset, Time.deltaTime);
+        //    //offset *= 1.001f;
 
-        }
+        //}
+        //if (defaultCam)
+        //{
+        //    initialOffset = (Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * initialOffset);
+
+        //    offset = Vector3.Lerp(offset, initialOffset, Time.deltaTime);
+        //    //offset *= 1.001f;
+
+        //}
+        initialOffset = (Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * initialOffset);
+
+        offset = Vector3.Lerp(offset, initialOffset, Time.deltaTime * 5f);
+
 
 
         mainCamera.transform.position = transform.position + offset;
@@ -102,9 +120,16 @@ public class thirdPersonCamera : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-        if(other.gameObject.tag == "potAreaBegin"){
-            initialOffset = offset;
-            newCameraPos = true;
+        if(other.gameObject.tag == "potAreaBegin" && !potCam){
+            initialOffset = offset * 3f;
+            potCam = true;
+            defaultCam = false;
+        }
+        if (other.gameObject.tag == "defaultAreaBegin" && !defaultCam)
+        {
+            initialOffset = offset / 3f;
+            potCam = false;
+            defaultCam = true;
         }
 	}
 
