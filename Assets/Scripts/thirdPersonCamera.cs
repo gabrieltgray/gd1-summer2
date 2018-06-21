@@ -23,7 +23,9 @@ public class thirdPersonCamera : MonoBehaviour {
     bool potCam = false;
     bool carCam = false;
     bool defaultCam = false;
-    public List<GameObject> cameraLocations; 
+    public List<GameObject> cameraLocations;
+    public float deltaRot;
+    float cameraModifier = 1f;
 	// Use this for initialization
 	void Start () {
         isGrounded = true;
@@ -49,22 +51,20 @@ public class thirdPersonCamera : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
-        
+        Quaternion initRot = transform.rotation;
 
         Vector3 movementVec = new Vector3(Input.GetAxis("Horizontal") * speed, 0f, Input.GetAxis("Vertical")*speed);
         //transform.eulerAngles = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
         Vector3 targetAngle = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
         float directionFace = Mathf.LerpAngle(transform.eulerAngles.y, targetAngle.y, Time.deltaTime * turnSpeed);
-        print(directionFace);
         transform.eulerAngles = new Vector3(0f, directionFace, 0f);
         //rb.AddRelativeForce(movementVec*10f);
         rightMovement = transform.right * Input.GetAxis("Horizontal") * speed/2f;
         frontMovement = transform.forward * Input.GetAxis("Vertical") * speed;
 
+        deltaRot = (transform.rotation.eulerAngles- initRot.eulerAngles).y;
 
-
-
-
+        print(deltaRot);
 
         if(!isGrounded){
             yMovement -= new Vector3(0, 0.5f, 0);
@@ -88,33 +88,15 @@ public class thirdPersonCamera : MonoBehaviour {
 
         offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * offset;
 
-        //lerp to offset + (offset *some modifier)
-        //when you release lerp back to the base offset, i.e. offset / the current modifier
 
-
-        //if (potCam ){
-        //    initialOffset = (Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * initialOffset);
-            
-        //    offset = Vector3.Lerp(offset, initialOffset, Time.deltaTime);
-        //    //offset *= 1.001f;
-
-        //}
-        //if (defaultCam)
-        //{
-        //    initialOffset = (Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * initialOffset);
-
-        //    offset = Vector3.Lerp(offset, initialOffset, Time.deltaTime);
-        //    //offset *= 1.001f;
-
-        //}
         initialOffset = (Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * initialOffset);
 
         offset = Vector3.Lerp(offset, initialOffset, Time.deltaTime * 5f);
 
 
 
-        mainCamera.transform.position = transform.position + offset;
-        mainCamera.transform.LookAt(transform.position);
+        mainCamera.transform.position = transform.position + offset + transform.forward * 2f;
+        mainCamera.transform.LookAt(transform.position + transform.forward*2f);
 
 
     }
@@ -123,16 +105,31 @@ public class thirdPersonCamera : MonoBehaviour {
 	private void OnTriggerEnter(Collider other)
 	{
         if(other.gameObject.tag == "potAreaBegin" && !potCam){
-            initialOffset = offset * 3f;
+
+            cameraModifier = 3f;
             potCam = true;
             defaultCam = false;
+            carCam = false;
+            initialOffset = offset * cameraModifier;
         }
         if (other.gameObject.tag == "defaultAreaBegin" && !defaultCam)
         {
-            initialOffset = offset / 3f;
+            cameraModifier = 1 / cameraModifier;
             potCam = false;
             defaultCam = true;
+            carCam = false;
+            initialOffset = offset * cameraModifier;
         }
+        if (other.gameObject.tag == "carAreaBegin" && !carCam)
+        {
+            cameraModifier = 1/1.5f;
+            potCam = false;
+            defaultCam = false;
+            carCam = true;
+            initialOffset = offset * cameraModifier;
+        }
+
+
 	}
 
 	public void StopPeanut(){

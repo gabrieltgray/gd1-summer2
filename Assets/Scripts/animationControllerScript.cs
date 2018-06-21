@@ -17,7 +17,10 @@ public class animationControllerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
         anim.SetFloat("playerSpeedX", cameraScript.frontMovement.magnitude);
         anim.SetFloat("playerSpeedY", transform.InverseTransformDirection(rb.velocity).x);
+        anim.SetFloat("deltaRot", cameraScript.deltaRot);
+
 	}
 }
