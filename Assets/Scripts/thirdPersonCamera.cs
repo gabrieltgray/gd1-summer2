@@ -24,7 +24,7 @@ public class thirdPersonCamera : MonoBehaviour {
     bool carCam = false;
     bool defaultCam = false;
     public List<GameObject> cameraLocations;
-    float cameraMod;
+    float cameraMod =1f;
     public float distRot;
     Quaternion initRot;
 	// Use this for initialization
