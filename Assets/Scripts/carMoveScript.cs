@@ -19,7 +19,7 @@ public class carMoveScript : MonoBehaviour {
 
 
     void moveCar(){
-        float turnStep = 3f * Time.deltaTime;
+        float turnStep = 1f * Time.deltaTime;
         float moveStep = 5f * Time.deltaTime;
         Vector3 targetDir = transform.position - wayPoints[currentWaypoint].transform.position;
         Vector3 newDir = Vector3.RotateTowards(transform.forward, 
@@ -31,7 +31,7 @@ public class carMoveScript : MonoBehaviour {
 	private void OnTriggerEnter(Collider other)
 	{
         currentWaypoint++;
-        currentWaypoint = currentWaypoint % 5;
+        currentWaypoint = currentWaypoint % wayPoints.Count;
         print(currentWaypoint);
 	}
 }
