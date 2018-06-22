@@ -25,6 +25,8 @@ public class thirdPersonCamera : MonoBehaviour {
     bool defaultCam = false;
     public List<GameObject> cameraLocations;
     float cameraMod;
+    public float distRot;
+    Quaternion initRot;
 	// Use this for initialization
 	void Start () {
         isGrounded = true;
@@ -50,7 +52,7 @@ public class thirdPersonCamera : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
-
+        initRot = transform.rotation;
         Vector3 movementVec = new Vector3(Input.GetAxis("Horizontal") * speed, 0f, Input.GetAxis("Vertical")*speed);
         //transform.eulerAngles = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
         Vector3 targetAngle = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
@@ -59,7 +61,8 @@ public class thirdPersonCamera : MonoBehaviour {
         //rb.AddRelativeForce(movementVec*10f);
         rightMovement = transform.right * Input.GetAxis("Horizontal") * speed/2f;
         frontMovement = transform.forward * Input.GetAxis("Vertical") * speed;
-
+        distRot = (transform.rotation.eulerAngles - initRot.eulerAngles).y;
+        print(distRot);
 
 
 
