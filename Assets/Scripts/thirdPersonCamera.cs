@@ -50,7 +50,6 @@ public class thirdPersonCamera : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
-        
 
         Vector3 movementVec = new Vector3(Input.GetAxis("Horizontal") * speed, 0f, Input.GetAxis("Vertical")*speed);
         //transform.eulerAngles = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
