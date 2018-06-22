@@ -87,33 +87,15 @@ public class thirdPersonCamera : MonoBehaviour {
 
         offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * offset;
 
-        //lerp to offset + (offset *some modifier)
-        //when you release lerp back to the base offset, i.e. offset / the current modifier
 
-
-        //if (potCam ){
-        //    initialOffset = (Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * initialOffset);
-            
-        //    offset = Vector3.Lerp(offset, initialOffset, Time.deltaTime);
-        //    //offset *= 1.001f;
-
-        //}
-        //if (defaultCam)
-        //{
-        //    initialOffset = (Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * initialOffset);
-
-        //    offset = Vector3.Lerp(offset, initialOffset, Time.deltaTime);
-        //    //offset *= 1.001f;
-
-        //}
         initialOffset = (Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * initialOffset);
 
         offset = Vector3.Lerp(offset, initialOffset, Time.deltaTime * 5f);
 
 
 
-        mainCamera.transform.position = transform.position + offset;
-        mainCamera.transform.LookAt(transform.position);
+        mainCamera.transform.position = transform.position + offset + transform.forward*2f;
+        mainCamera.transform.LookAt(transform.position + transform.forward*2f);
 
 
     }
@@ -138,7 +120,7 @@ public class thirdPersonCamera : MonoBehaviour {
         }
         if (other.gameObject.tag == "carAreaBegin" && !carCam)
         {
-            cameraMod = 1 / 3f;
+            cameraMod = 1 / 2f;
             potCam = false;
             defaultCam = false;
             carCam = true;
