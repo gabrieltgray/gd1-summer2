@@ -20,6 +20,10 @@ public class groundedCollision : MonoBehaviour {
 	}
 	private void OnTriggerExit(Collider other)
 	{
-        transform.parent.GetComponent<thirdPersonCamera>().isGrounded = false;
+        if(other.gameObject.tag != "potAreaBegin"){
+
+            transform.parent.GetComponent<thirdPersonCamera>().isGrounded = false;
+
+        }
 	}
 }
