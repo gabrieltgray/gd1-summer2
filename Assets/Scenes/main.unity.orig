@@ -1996,6 +1996,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91f69f763bc005644962090c6fad66b8, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 --- !u!4 &318014041 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4701443313723714, guid: c7dd68abb70caff40a7c19f6b87df8f3,
@@ -2067,7 +2068,9 @@ Transform:
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &336070222 stripped
-
+=======
+--- !u!4 &632148054 stripped
+>>>>>>> 5abc6a7d2495c01a747bd65dfb0c3ec6d8e7bde3
 Transform:
   m_PrefabParentObject: {fileID: 4582966054578538, guid: 91f69f763bc005644962090c6fad66b8,
     type: 2}
@@ -2673,6 +2676,7 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 114306491696190278, guid: 2a62cadaa19264337967e5baa73fd770,
         type: 2}
       propertyPath: mainCamera
@@ -2687,6 +2691,11 @@ Prefab:
         type: 2}
       propertyPath: turnSpeed
       value: 10
+=======
+    - target: {fileID: 4753046869741092, guid: 438042da60d4b694887692d233d9b3a1, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+>>>>>>> 5abc6a7d2495c01a747bd65dfb0c3ec6d8e7bde3
       objectReference: {fileID: 0}
     - target: {fileID: 114306491696190278, guid: 2a62cadaa19264337967e5baa73fd770,
         type: 2}
@@ -3183,6 +3192,7 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+<<<<<<< HEAD
 --- !u!1001 &551723828
 Prefab:
   m_ObjectHideFlags: 0
@@ -3362,11 +3372,18 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 30c3cf90dea91274d8367692ef6e5f10, type: 3}
   m_PrefabInternal: {fileID: 591899285}
 --- !u!43 &618605353
+=======
+--- !u!43 &801209063
+>>>>>>> 5abc6a7d2495c01a747bd65dfb0c3ec6d8e7bde3
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
   m_Name: pb_Mesh-17280
+=======
+  m_Name: pb_Mesh-95448
+>>>>>>> 5abc6a7d2495c01a747bd65dfb0c3ec6d8e7bde3
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

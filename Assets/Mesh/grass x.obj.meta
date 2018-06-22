@@ -1,47 +1,22 @@
 fileFormatVersion: 2
-guid: 2c865bc6c3bffd94884785b6fe20726e
+guid: 644ff1e043c145e4eb197872ec0c1fdb
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Back_Hips
-    100002: Bottom_Jaw
-    100004: Front_of_body
-    100006: Left_Back_Foot
-    100008: Left_Front_Elbow
-    100010: Left_Front_Foot
-    100012: Left_Front_Shoulder
-    100014: Left_Knee
-    100016: Left_Thigh
-    100018: //RootNode
-    100020: Right_Back_Foot
-    100022: Right_Front_Elbow
-    100024: Right_Front_Foot
-    100026: Right_Front_Shoulder
-    100028: Right_Knee
-    100030: Right_Thigh
-    100032: Top_Jaw
-    100034: Waist
-    400000: Back_Hips
-    400002: Bottom_Jaw
-    400004: Front_of_body
-    400006: Left_Back_Foot
-    400008: Left_Front_Elbow
-    400010: Left_Front_Foot
-    400012: Left_Front_Shoulder
-    400014: Left_Knee
-    400016: Left_Thigh
-    400018: //RootNode
-    400020: Right_Back_Foot
-    400022: Right_Front_Elbow
-    400024: Right_Front_Foot
-    400026: Right_Front_Shoulder
-    400028: Right_Knee
-    400030: Right_Thigh
-    400032: Top_Jaw
-    400034: Waist
-    7400000: Take 001
-    9500000: //RootNode
-  externalObjects: {}
+    100000: //RootNode
+    100002: pPlane6
+    400000: //RootNode
+    400002: pPlane6
+    2100000: pPlane6Mat
+    2300000: pPlane6
+    3300000: pPlane6
+    4300000: pPlane6
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pPlane6Mat
+    second: {fileID: 2100000, guid: a0ffeb41f8ff89e4f8b602b60ea31d33, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -116,7 +91,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
