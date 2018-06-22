@@ -6,6 +6,8 @@ TagManager:
   tags:
   - potAreaBegin
   - defaultAreaBegin
+  - End
+  - carAreaBegin
   layers:
   - Default
   - TransparentFX
