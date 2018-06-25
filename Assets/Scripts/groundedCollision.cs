@@ -26,4 +26,8 @@ public class groundedCollision : MonoBehaviour {
 
         }
 	}
+	private void OnTriggerStay(Collider other)
+	{
+        transform.parent.GetComponent<thirdPersonCamera>().isGrounded = true;
+	}
 }
