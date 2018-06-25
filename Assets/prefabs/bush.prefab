@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4463434520733484}
   - component: {fileID: 33207031228897510}
   - component: {fileID: 23324344717885558}
+  - component: {fileID: 64855537401093312}
   m_Layer: 0
   m_Name: bush
   m_TagString: Untagged
@@ -82,4 +83,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1179778100794550}
+  m_Mesh: {fileID: 4300000, guid: 8a69bb09a1339f84fb8eb718099dee17, type: 3}
+--- !u!64 &64855537401093312
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1179778100794550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 8a69bb09a1339f84fb8eb718099dee17, type: 3}
