@@ -19,8 +19,8 @@ public class carMoveScript : MonoBehaviour {
 
 
     void moveCar(){
-        float turnStep = 1f * Time.deltaTime;
-        float moveStep = 5f * Time.deltaTime;
+        float turnStep = 8f * Time.deltaTime;
+        float moveStep = 10f * Time.deltaTime;
         Vector3 targetDir = transform.position - wayPoints[currentWaypoint].transform.position;
         Vector3 newDir = Vector3.RotateTowards(transform.forward, 
                                                targetDir, turnStep, 0f);

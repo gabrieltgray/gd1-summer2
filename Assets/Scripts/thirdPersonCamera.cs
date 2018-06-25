@@ -8,6 +8,7 @@ public class thirdPersonCamera : MonoBehaviour {
     private float speed;
     [SerializeField]
     private float cursorSpeed;
+    private Vector3 defaultOffset;
     public Vector3 offset;
     private Rigidbody rb;
     public float gravity = 9.81f;
@@ -23,6 +24,7 @@ public class thirdPersonCamera : MonoBehaviour {
     bool potCam = false;
     bool carCam = false;
     bool defaultCam = false;
+    bool goalCam = false;
     public List<GameObject> cameraLocations;
     float cameraMod =1f;
     public float distRot;
@@ -32,6 +34,7 @@ public class thirdPersonCamera : MonoBehaviour {
         isGrounded = true;
         rb = GetComponent<Rigidbody>();
         initialOffset = offset;
+        defaultOffset = offset;
         //offset respresents the x, y, and z coordinates of the position of the camera
         //offset = new Vector3(2f, 
                              //1.6f,
@@ -62,7 +65,6 @@ public class thirdPersonCamera : MonoBehaviour {
         rightMovement = transform.right * Input.GetAxis("Horizontal") * speed/2f;
         frontMovement = transform.forward * Input.GetAxis("Vertical") * speed;
         distRot = (transform.rotation.eulerAngles - initRot.eulerAngles).y;
-        print(distRot);
 
 
 
@@ -93,12 +95,34 @@ public class thirdPersonCamera : MonoBehaviour {
 
         initialOffset = (Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * initialOffset);
 
+
+
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            goalCam = !goalCam;
+            offset = transform.position - GameObject.FindWithTag("Finish").transform.position;
+            initialOffset = transform.position - GameObject.FindWithTag("Finish").transform.position + new Vector3(0, 10f, 0);
+            if(!goalCam){
+                initialOffset = transform.up + defaultOffset;
+                offset = transform.up + defaultOffset;
+                print("offset: " + offset);
+            }
+        }
+       
+        if(!goalCam){
+            
+            mainCamera.transform.position = transform.position + offset + transform.forward * 2f;
+            mainCamera.transform.LookAt(transform.position + transform.forward * 2f);
+
+        }
+        else{
+            
+            mainCamera.transform.position = GameObject.FindWithTag("Finish").transform.position + offset + GameObject.FindWithTag("Finish").transform.forward * 2f;
+            mainCamera.transform.LookAt(GameObject.FindWithTag("Finish").transform);
+        }
         offset = Vector3.Lerp(offset, initialOffset, Time.deltaTime * 5f);
 
-
-
-        mainCamera.transform.position = transform.position + offset + transform.forward*2f;
-        mainCamera.transform.LookAt(transform.position + transform.forward*2f);
 
 
     }
@@ -129,6 +153,15 @@ public class thirdPersonCamera : MonoBehaviour {
             carCam = true;
             initialOffset = offset * cameraMod;
         }
+        if (other.gameObject.tag == "goalAreaBegin" && !goalCam)
+        {
+            cameraMod = 1 / 2f;
+            potCam = false;
+            defaultCam = false;
+            carCam = true;
+            initialOffset = offset * cameraMod;
+        }
+
 	}
 
 	public void StopPeanut(){
