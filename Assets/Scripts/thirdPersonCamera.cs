@@ -45,9 +45,10 @@ public class thirdPersonCamera : MonoBehaviour {
 	void Update () {
         yMovement = new Vector3(0f, rb.velocity.y, 0f);
 
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             isGrounded = false;
+
             yMovement += new Vector3(0, jumpHeight, 0);
 
         }
@@ -100,14 +101,21 @@ public class thirdPersonCamera : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.L))
         {
+            Vector3 initOffset = Vector3.zero;
             goalCam = !goalCam;
-            offset = transform.position - GameObject.FindWithTag("Finish").transform.position;
-            initialOffset = transform.position - GameObject.FindWithTag("Finish").transform.position + new Vector3(0, 10f, 0);
+            //pressing space brings you back to regular
             if(!goalCam){
-                initialOffset = transform.up + defaultOffset;
-                offset = transform.up + defaultOffset;
-                print("offset: " + offset);
+                print("transform.rotation after: " + transform.rotation.eulerAngles);
+                initialOffset = initOffset;
+                offset = initOffset;
+
+            }else{
+                initOffset = offset;
+                offset = transform.position - GameObject.FindWithTag("End").transform.position;
+                initialOffset = transform.position - GameObject.FindWithTag("End").transform.position + new Vector3(0, 10f, 0);
+            
             }
+
         }
        
         if(!goalCam){
@@ -118,8 +126,8 @@ public class thirdPersonCamera : MonoBehaviour {
         }
         else{
             
-            mainCamera.transform.position = GameObject.FindWithTag("Finish").transform.position + offset + GameObject.FindWithTag("Finish").transform.forward * 2f;
-            mainCamera.transform.LookAt(GameObject.FindWithTag("Finish").transform);
+            mainCamera.transform.position = GameObject.FindWithTag("End").transform.position + offset + GameObject.FindWithTag("End").transform.forward * 2f;
+            mainCamera.transform.LookAt(GameObject.FindWithTag("End").transform);
         }
         offset = Vector3.Lerp(offset, initialOffset, Time.deltaTime * 5f);
 
