@@ -764,7 +764,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   speed: 20
   cursorSpeed: 5
-  offset: {x: 6, y: 4, z: 0}
+  offset: {x: 6, y: 3, z: 0}
   gravity: 9.81
   jumpHeight: 15
   turnSpeed: 5

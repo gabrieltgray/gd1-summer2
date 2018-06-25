@@ -998,31 +998,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4919120028445726, guid: ab893ba5c42e50f4e877975cc41d11de, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -133.19913
+      value: 75.67673
       objectReference: {fileID: 0}
     - target: {fileID: 4919120028445726, guid: ab893ba5c42e50f4e877975cc41d11de, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -505.30396
+      value: -459.16754
       objectReference: {fileID: 0}
     - target: {fileID: 4919120028445726, guid: ab893ba5c42e50f4e877975cc41d11de, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 243.53894
+      value: 278.35034
       objectReference: {fileID: 0}
     - target: {fileID: 4919120028445726, guid: ab893ba5c42e50f4e877975cc41d11de, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.28068367
+      value: -0.44710127
       objectReference: {fileID: 0}
     - target: {fileID: 4919120028445726, guid: ab893ba5c42e50f4e877975cc41d11de, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.70029926
+      value: 0.53010964
       objectReference: {fileID: 0}
     - target: {fileID: 4919120028445726, guid: ab893ba5c42e50f4e877975cc41d11de, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.35689908
+      value: 0.3921397
       objectReference: {fileID: 0}
     - target: {fileID: 4919120028445726, guid: ab893ba5c42e50f4e877975cc41d11de, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.5508364
+      value: 0.60440934
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab893ba5c42e50f4e877975cc41d11de, type: 2}
@@ -3541,6 +3541,11 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114306491696190278, guid: 2a62cadaa19264337967e5baa73fd770,
+        type: 2}
+      propertyPath: offset.y
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a62cadaa19264337967e5baa73fd770, type: 2}
   m_IsPrefabParent: 0
@@ -5566,8 +5571,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 596766999}
-  m_LocalRotation: {x: 0.02939317, y: 0.0030181115, z: 0.0000946973, w: -0.9995634}
-  m_LocalPosition: {x: 512.11914, y: -283.8433, z: -268.13153}
+  m_LocalRotation: {x: -0.44710127, y: 0.53010964, z: 0.3921397, w: 0.60440934}
+  m_LocalPosition: {x: 13.430313, y: -532.33923, z: 1341.9114}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10911,8 +10916,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1246016246}
-  m_LocalRotation: {x: -0.28068367, y: 0.70029926, z: 0.35689908, w: 0.5508364}
-  m_LocalPosition: {x: -386.4378, y: -463.8301, z: -9.564087}
+  m_LocalRotation: {x: -0.44710127, y: 0.53010964, z: 0.3921397, w: 0.60440934}
+  m_LocalPosition: {x: -177.56195, y: -417.6937, z: 25.247314}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1211238971}
@@ -15635,6 +15640,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 27c00c6df3423b94ab1c6da2c44127f3, type: 2}
+    - target: {fileID: 100000, guid: ca5ecd3bb9576f74cbb899db93e64443, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca5ecd3bb9576f74cbb899db93e64443, type: 3}
   m_IsPrefabParent: 0
@@ -17373,8 +17382,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1822497626}
-  m_LocalRotation: {x: -0.070688784, y: 0.7060682, z: 0.07119975, w: 0.70100033}
-  m_LocalPosition: {x: 52.11767, y: 1.2943993, z: 1044.5828}
+  m_LocalRotation: {x: -0.44710127, y: 0.53010964, z: 0.3921397, w: 0.60440934}
+  m_LocalPosition: {x: 13.430313, y: -531.9392, z: 1341.9114}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
