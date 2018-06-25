@@ -9,47 +9,45 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1221144137394608}
+  m_RootGameObject: {fileID: 1871463639024138}
   m_IsPrefabParent: 1
---- !u!1 &1221144137394608
+--- !u!1 &1871463639024138
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4914147418912902}
-  - component: {fileID: 33535033201662100}
-  - component: {fileID: 23363007492687126}
-  - component: {fileID: 65740644389149988}
-  - component: {fileID: 114045141903054306}
-  - component: {fileID: 54477337406879624}
+  - component: {fileID: 4675462714377866}
+  - component: {fileID: 33649595192549068}
+  - component: {fileID: 23066829956741610}
+  - component: {fileID: 65496155921332460}
   m_Layer: 0
-  m_Name: carAreaBegin
-  m_TagString: carAreaBegin
+  m_Name: Stubby shrub
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4914147418912902
+--- !u!4 &4675462714377866
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1221144137394608}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 175.37279, y: 15.016662, z: 1089.6338}
-  m_LocalScale: {x: 46.18279, y: 6.2, z: 3.79}
+  m_GameObject: {fileID: 1871463639024138}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 158.15895, y: 12.45, z: 1068.1}
+  m_LocalScale: {x: 300, y: 300, z: 300}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23363007492687126
+--- !u!23 &23066829956741610
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1221144137394608}
+  m_GameObject: {fileID: 1871463639024138}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 7ece9aa1c8a1a4840b963c815a2efca8, type: 2}
+  - {fileID: 2100000, guid: ec312a81561d9c4438df42979e37dc8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,50 +77,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33535033201662100
+--- !u!33 &33649595192549068
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1221144137394608}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54477337406879624
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1221144137394608}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &65740644389149988
+  m_GameObject: {fileID: 1871463639024138}
+  m_Mesh: {fileID: 4300000, guid: 2810be4a4ce869743b77a2c87a470a59, type: 3}
+--- !u!65 &65496155921332460
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1221144137394608}
+  m_GameObject: {fileID: 1871463639024138}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114045141903054306
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1221144137394608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c74af85bb10f47da9599ebb14629f50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  player: {fileID: 0}
+  m_Size: {x: 0.013375184, y: 0.011304516, z: 0.013375184}
+  m_Center: {x: 0, y: -0.0003786315, z: 0}

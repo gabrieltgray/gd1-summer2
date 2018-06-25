@@ -19,5 +19,6 @@ public class animationControllerScript : MonoBehaviour {
 	void Update () {
         anim.SetFloat("playerSpeedX", cameraScript.frontMovement.magnitude);
         anim.SetFloat("playerSpeedY", transform.InverseTransformDirection(rb.velocity).x);
+        anim.SetFloat("playerRotY", -cameraScript.distRot);
 	}
 }
