@@ -20,6 +20,7 @@ public class youDied : MonoBehaviour {
         if (gameObject.GetComponent<Transform>().position.y <= 11 && screenSpawned == false)
         {
             Instantiate(redScreen);
+            Time.timeScale = 0.25f;
             screenSpawned = true;
             Invoke("Death", timeDelay);
         }
