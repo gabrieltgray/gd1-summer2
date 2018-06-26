@@ -15,12 +15,16 @@ public class youDied : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (gameObject.GetComponent<Transform>().position.y <= 11)
+        {
+            Instantiate(redScreen);
+            Invoke("Death", timeDelay);
+        }
     }
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+		if (collision.gameObject.tag == "Enemy")
         {
             Instantiate(redScreen);
             Invoke("Death", timeDelay);
