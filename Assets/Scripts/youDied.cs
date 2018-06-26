@@ -14,13 +14,6 @@ public class youDied : MonoBehaviour {
 	void Update () {
 
     }
-	void FixedUpdate(){
-		if (gameObject.GetComponent<Transform> ().position.y <= 11) 
-		{
-			SceneManager.LoadScene("main");
-			print("reset");
-		}
-	}
 
     void OnCollisionEnter(Collision collision)
     {
