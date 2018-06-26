@@ -8,6 +8,8 @@ public class youDied : MonoBehaviour {
     public float timeDelay;
     public GameObject redScreen;
 
+    bool screenSpawned = false;
+
 	// Use this for initialization
 	void Start () {
         
@@ -15,9 +17,10 @@ public class youDied : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (gameObject.GetComponent<Transform>().position.y <= 11)
+        if (gameObject.GetComponent<Transform>().position.y <= 11 && screenSpawned == false)
         {
             Instantiate(redScreen);
+            screenSpawned = true;
             Invoke("Death", timeDelay);
         }
     }
