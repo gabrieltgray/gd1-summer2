@@ -124,5 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c74af85bb10f47da9599ebb14629f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  player: {fileID: 0}
+  mainCamera: {fileID: 20285422663941942, guid: 003da2c9170f2428ea7f510900c66ce8,
+    type: 2}
+  player: {fileID: 1346036298258992, guid: 2a62cadaa19264337967e5baa73fd770, type: 2}
