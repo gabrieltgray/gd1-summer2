@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class youDied : MonoBehaviour {
 
+    public float timeDelay;
+    public GameObject redScreen;
+
 	// Use this for initialization
 	void Start () {
-        print("youDied is working at least a little");
+        
 	}
 	
 	// Update is called once per frame
@@ -15,12 +18,17 @@ public class youDied : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            SceneManager.LoadScene("main");
-            print("reset");
+            Instantiate(redScreen);
+            Invoke("Death", timeDelay);
         }
+    }
+
+    void Death()
+    {
+        SceneManager.LoadScene("main");
     }
 }
