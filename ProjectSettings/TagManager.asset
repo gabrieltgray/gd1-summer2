@@ -8,6 +8,7 @@ TagManager:
   - defaultAreaBegin
   - End
   - carAreaBegin
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 136081994322406532}
   - component: {fileID: 114306491696190278}
   - component: {fileID: 114932428033443096}
+  - component: {fileID: 114967913493932858}
   m_Layer: 0
   m_Name: PeanutwRig
   m_TagString: Player
@@ -782,6 +783,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88a3dbd5f6d694a5b832981844cffc77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114967913493932858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346036298258992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb4fca1b9c4e5544a58350fe1f01e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114998133653715304
