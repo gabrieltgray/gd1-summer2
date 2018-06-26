@@ -29,6 +29,7 @@ public class thirdPersonCamera : MonoBehaviour {
     float cameraMod =1f;
     public float distRot;
     Quaternion initRot;
+    Vector3 initOffset = Vector3.zero;
 	// Use this for initialization
 	void Start () {
         isGrounded = true;
@@ -101,9 +102,9 @@ public class thirdPersonCamera : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            Vector3 initOffset = Vector3.zero;
+            
             goalCam = !goalCam;
-            //pressing space brings you back to regular
+            //pressing l brings you back to regular
             if(!goalCam){
                 print("transform.rotation after: " + transform.rotation.eulerAngles);
                 initialOffset = initOffset;
@@ -163,7 +164,7 @@ public class thirdPersonCamera : MonoBehaviour {
         }
         if (other.gameObject.tag == "goalAreaBegin" && !goalCam)
         {
-            cameraMod = 1 / 2f;
+            cameraMod = 1f;
             potCam = false;
             defaultCam = false;
             carCam = true;
