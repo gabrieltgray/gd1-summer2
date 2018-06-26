@@ -796,9 +796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb4fca1b9c4e5544a58350fe1f01e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeDelay: 2
+  timeDelay: 0.4
   redScreen: {fileID: 1244091918547104, guid: 54a49266d9282f04a825a6626a8c2b20, type: 2}
-  deathText: {fileID: 1998439986322356, guid: aaa782faafec0d34b9f7d58354326124, type: 2}
 --- !u!114 &114998133653715304
 MonoBehaviour:
   m_ObjectHideFlags: 1

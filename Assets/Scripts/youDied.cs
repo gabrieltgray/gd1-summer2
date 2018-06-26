@@ -8,12 +8,13 @@ public class youDied : MonoBehaviour {
     public float timeDelay;
     public GameObject redScreen;
 
-    bool screenSpawned = false;
+    bool screenSpawned;
 
 	// Use this for initialization
 	void Start () {
-        
-	}
+        screenSpawned = false;
+        Time.timeScale = 1.0f;
+    }
 	
 	// Update is called once per frame
 	void Update () {
