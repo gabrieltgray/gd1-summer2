@@ -21,19 +21,19 @@ public class potCameraScript : MonoBehaviour {
 	// Update is called once per frame
     public void activatePots(){
         print("activate pots");
-        if(!cameraScript.potCam){
-            for (int i = 0; i < potSpawnerList.Count; i++){
-                potSpawnerList[i].SetActive(false);
-            }
-        }
-        else{
+        //if(!cameraScript.potCam){
+        //    for (int i = 0; i < potSpawnerList.Count; i++){
+        //        potSpawnerList[i].SetActive(false);
+        //    }
+        //}
+
             
-            for (int i = 0; i < potSpawnerList.Count; i++)
-            {
-                potSpawnerList[i].SetActive(true);
-                potSpawnerList[i].GetComponent<potSpawner>().resetPos();
-            }
+        for (int i = 0; i < potSpawnerList.Count; i++)
+        {
+            potSpawnerList[i].SetActive(true);
+            potSpawnerList[i].GetComponent<potSpawner>().resetPos();
         }
+
     }
 	void Update () {
 		
