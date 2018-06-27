@@ -21,7 +21,7 @@ public class carManagerScript : MonoBehaviour {
 
     void spawnCar(){
         int carChosen = Random.Range(0, carList.Count);
-        Instantiate(carList[carChosen], carList[carChosen].GetComponent<carMoveScript>().startPos, Quaternion.identity);
+        Instantiate(carList[carChosen], carList[carChosen].transform.position, Quaternion.identity);
     }
 	void Update () {
         if(!activateSpawner){
