@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 33535033201662100}
   - component: {fileID: 23363007492687126}
   - component: {fileID: 65740644389149988}
-  - component: {fileID: 114045141903054306}
   - component: {fileID: 54477337406879624}
+  - component: {fileID: 114020156230697022}
   m_Layer: 0
   m_Name: carAreaBegin
   m_TagString: carAreaBegin
@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1221144137394608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 175.37279, y: 15.016662, z: 1089.6338}
-  m_LocalScale: {x: 46.18279, y: 6.2, z: 3.79}
+  m_LocalPosition: {x: -0.0132049695, y: 21.1, z: 6.9835625}
+  m_LocalScale: {x: 14, y: 6.2, z: 3.79}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 7ece9aa1c8a1a4840b963c815a2efca8, type: 2}
+  - {fileID: 2100000, guid: 0fb0705f31172b24cbcc0cff7b434c8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,7 +113,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114045141903054306
+--- !u!114 &114020156230697022
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -121,9 +121,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1221144137394608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c74af85bb10f47da9599ebb14629f50, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a009e7defedb4785910b846d2df29d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 20285422663941942, guid: 003da2c9170f2428ea7f510900c66ce8,
-    type: 2}
-  player: {fileID: 1346036298258992, guid: 2a62cadaa19264337967e5baa73fd770, type: 2}
+  carList:
+  - {fileID: 1454538559454520, guid: fb88fc9259b0d614fbfbc01c3e101adb, type: 2}
+  minSpawntime: 0
+  maxSpawnTime: 2
+  activateSpawner: 0

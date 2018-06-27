@@ -172,7 +172,16 @@ public class thirdPersonCamera : MonoBehaviour {
             taggedObjects[i].SetActive(false);
         }
     }
-	private void OnTriggerEnter(Collider other)
+    void deactivateCars()
+    {
+        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("carAreaBegin");
+        for (int i = 0; i < taggedObjects.Length; i++)
+        {
+            taggedObjects[i].GetComponent<carManagerScript>().activateSpawner = false;
+        }
+        print("deactivate cars");
+    }
+    private void OnTriggerEnter(Collider other)
 	{
         
         if(other.gameObject.tag == "potAreaBegin" && !potCam){
@@ -189,6 +198,7 @@ public class thirdPersonCamera : MonoBehaviour {
         if (other.gameObject.tag == "potAreaBegin"){
             other.gameObject.GetComponent<potCameraScript>().activatePots();
         }
+
         if (other.gameObject.tag == "defaultAreaBegin" && !defaultCam)
         {
             cameraMod = 1/cameraMod;
@@ -205,6 +215,8 @@ public class thirdPersonCamera : MonoBehaviour {
             defaultCam = false;
             carCam = true;
             initialOffset = offset * cameraMod;
+            other.gameObject.GetComponent<carManagerScript>().activateSpawner = true;
+
         }
         if (other.gameObject.tag == "goalAreaBegin" && !goalCam)
         {
@@ -218,6 +230,9 @@ public class thirdPersonCamera : MonoBehaviour {
         {
             print("deactivating pots...");
             deactivatePots();
+        }
+        if(!carCam){
+            deactivateCars();
         }
 
 	}
