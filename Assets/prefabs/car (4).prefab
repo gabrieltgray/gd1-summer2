@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 135190215081712860}
   m_Layer: 0
   m_Name: Sphere (1)
-  m_TagString: Untagged
+  m_TagString: carWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 135371679585952212}
   m_Layer: 0
   m_Name: Sphere (2)
-  m_TagString: Untagged
+  m_TagString: carWaypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -652,8 +652,7 @@ MonoBehaviour:
   wayPoints:
   - {fileID: 4564846064717758}
   - {fileID: 4255402483962750}
-  - {fileID: 0}
-  - {fileID: 0}
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!135 &135190215081712860
 SphereCollider:
   m_ObjectHideFlags: 1

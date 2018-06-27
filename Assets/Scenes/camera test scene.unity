@@ -982,7 +982,7 @@ Prefab:
     - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
         type: 2}
       propertyPath: carList.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4914147418912902, guid: 2ed367c5640ef427c85beb3dd8cdb523, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1052,7 +1052,26 @@ Prefab:
         type: 2}
       propertyPath: carList.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1240370398126210, guid: 69adca100d430a04cbbf72a617d3a134,
+        type: 2}
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+        type: 2}
+      propertyPath: carList.Array.data[2]
+      value: 
+      objectReference: {fileID: 1215359560845468, guid: 246d798b0892afc439ef8ffbbf1b8631,
+        type: 2}
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+        type: 2}
+      propertyPath: carList.Array.data[3]
+      value: 
+      objectReference: {fileID: 1650147003923138, guid: f83e767e08d662f48932a7f4922b5ede,
+        type: 2}
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+        type: 2}
+      propertyPath: carList.Array.data[4]
+      value: 
+      objectReference: {fileID: 1908308708633880, guid: 2a78ca4d2bcdf02459a6a9b142811727,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2ed367c5640ef427c85beb3dd8cdb523, type: 2}
@@ -1072,7 +1091,7 @@ Prefab:
     - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
         type: 2}
       propertyPath: carList.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4914147418912902, guid: 2ed367c5640ef427c85beb3dd8cdb523, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1108,20 +1127,28 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
         type: 2}
-      propertyPath: maxSpawnTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
-        type: 2}
-      propertyPath: carList.Array.data[0]
-      value: 
-      objectReference: {fileID: 1454538559454520, guid: fb88fc9259b0d614fbfbc01c3e101adb,
-        type: 2}
-    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
-        type: 2}
       propertyPath: carList.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1240370398126210, guid: 69adca100d430a04cbbf72a617d3a134,
+        type: 2}
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+        type: 2}
+      propertyPath: carList.Array.data[2]
+      value: 
+      objectReference: {fileID: 1215359560845468, guid: 246d798b0892afc439ef8ffbbf1b8631,
+        type: 2}
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+        type: 2}
+      propertyPath: carList.Array.data[3]
+      value: 
+      objectReference: {fileID: 1650147003923138, guid: f83e767e08d662f48932a7f4922b5ede,
+        type: 2}
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+        type: 2}
+      propertyPath: carList.Array.data[4]
+      value: 
+      objectReference: {fileID: 1908308708633880, guid: 2a78ca4d2bcdf02459a6a9b142811727,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ed367c5640ef427c85beb3dd8cdb523, type: 2}
   m_IsPrefabParent: 0
