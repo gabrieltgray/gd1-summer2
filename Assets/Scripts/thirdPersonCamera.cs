@@ -21,7 +21,7 @@ public class thirdPersonCamera : MonoBehaviour {
     public bool isGrounded;
     private Vector3 yMovement;
     Vector3 initialOffset;
-    bool potCam = false;
+    public bool potCam = false;
     bool carCam = false;
     bool defaultCam = false;
     bool goalCam = false;
@@ -136,15 +136,26 @@ public class thirdPersonCamera : MonoBehaviour {
 
     }
 
-
+    void deactivatePots(){
+        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("panSpawner");
+        for (int i = 0; i < taggedObjects.Length; i++){
+            taggedObjects[i].GetComponent<potSpawner>().resetPos();
+            taggedObjects[i].SetActive(false);
+        }
+    }
 	private void OnTriggerEnter(Collider other)
 	{
+        
         if(other.gameObject.tag == "potAreaBegin" && !potCam){
             cameraMod = 3f;
             potCam = true;
             defaultCam = false;
             carCam = false;
             initialOffset = offset * cameraMod;
+            other.gameObject.GetComponent<potCameraScript>().activatePots();
+
+
+
         }
         if (other.gameObject.tag == "defaultAreaBegin" && !defaultCam)
         {
@@ -153,6 +164,7 @@ public class thirdPersonCamera : MonoBehaviour {
             defaultCam = true;
             carCam = false;
             initialOffset = offset * cameraMod;
+
         }
         if (other.gameObject.tag == "carAreaBegin" && !carCam)
         {
@@ -169,6 +181,11 @@ public class thirdPersonCamera : MonoBehaviour {
             defaultCam = false;
             carCam = true;
             initialOffset = offset * cameraMod;
+        }
+        if (!potCam)
+        {
+            print("deactivating pots...");
+            deactivatePots();
         }
 
 	}
