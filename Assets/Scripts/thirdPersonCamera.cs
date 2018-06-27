@@ -157,6 +157,9 @@ public class thirdPersonCamera : MonoBehaviour {
 
 
         }
+        if (other.gameObject.tag == "potAreaBegin"){
+            other.gameObject.GetComponent<potCameraScript>().activatePots();
+        }
         if (other.gameObject.tag == "defaultAreaBegin" && !defaultCam)
         {
             cameraMod = 1/cameraMod;
