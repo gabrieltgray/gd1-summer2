@@ -64,6 +64,7 @@ public class potSpawner : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(true);
         if(Projectile.transform.position.y < -3f){
             resetPos();
+            transform.GetChild(0).gameObject.SetActive(false);
             elapse_time = 0;
         }
         Projectile.Translate(0, (Vy - (gravity * elapse_time)) * Time.deltaTime, Vx * Time.deltaTime);
