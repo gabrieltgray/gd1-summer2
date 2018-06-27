@@ -30,6 +30,7 @@ public class thirdPersonCamera : MonoBehaviour {
     public float distRot;
     Quaternion initRot;
     Vector3 initOffset = Vector3.zero;
+    public bool keyDownForJump = false;
 	// Use this for initialization
 	void Start () {
         isGrounded = true;
@@ -45,14 +46,36 @@ public class thirdPersonCamera : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         yMovement = new Vector3(0f, rb.velocity.y, 0f);
-
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            keyDownForJump = true;
+            Transform[] childTransforms = transform.GetComponentsInChildren<Transform>();
+            for (int i = 0; i < childTransforms.Length; i++)
+            {
+                if(childTransforms[i].gameObject.name != "Waist"){
+                    continue;
+                }
+                childTransforms[i].position -= new Vector3(0f, 1f, 0f);
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.Space) && isGrounded)
+        {
+            Transform[] childTransforms = transform.GetComponentsInChildren<Transform>();
+            for (int i = 0; i < childTransforms.Length; i++)
+            {
+                if (childTransforms[i].gameObject.name == "Sphere")
+                {
+                    continue;
+                }
+                childTransforms[i].position += new Vector3(0f, 1f, 0f);
+            }
             isGrounded = false;
+            keyDownForJump = false;
 
             yMovement += new Vector3(0, jumpHeight, 0);
 
         }
+
 	}
 
 	private void FixedUpdate()
@@ -64,8 +87,14 @@ public class thirdPersonCamera : MonoBehaviour {
         float directionFace = Mathf.LerpAngle(transform.eulerAngles.y, targetAngle.y, Time.deltaTime * turnSpeed);
         transform.eulerAngles = new Vector3(0f, directionFace, 0f);
         //rb.AddRelativeForce(movementVec*10f);
+
         rightMovement = transform.right * Input.GetAxis("Horizontal") * speed/2f;
         frontMovement = transform.forward * Input.GetAxis("Vertical") * speed;
+        if (keyDownForJump)
+        {
+            rightMovement = Vector3.zero;
+            frontMovement = Vector3.zero;
+        }
         distRot = (transform.rotation.eulerAngles - initRot.eulerAngles).y;
 
 

@@ -20,5 +20,7 @@ public class animationControllerScript : MonoBehaviour {
         anim.SetFloat("playerSpeedX", cameraScript.frontMovement.magnitude);
         anim.SetFloat("playerSpeedY", transform.InverseTransformDirection(rb.velocity).x);
         anim.SetFloat("playerRotY", -cameraScript.distRot);
+        anim.SetFloat("playerVelY", rb.velocity.y);
+        anim.SetBool("keyDownJump", cameraScript.keyDownForJump);
 	}
 }

@@ -30,8 +30,11 @@ public class carMoveScript : MonoBehaviour {
     }
 	private void OnTriggerEnter(Collider other)
 	{
-        currentWaypoint++;
-        currentWaypoint = currentWaypoint % wayPoints.Count;
-        print(currentWaypoint);
+        if(other.gameObject.tag == "carWaypoint"){
+            currentWaypoint++;
+            currentWaypoint = currentWaypoint % wayPoints.Count;
+            print(currentWaypoint);
+        }
+
 	}
 }
