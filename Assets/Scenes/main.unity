@@ -4407,7 +4407,7 @@ GameObject:
   - component: {fileID: 358795284}
   m_Layer: 0
   m_Name: car_fbx
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4932,15 +4932,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1625310614352980, guid: 43240a291bd93431d95cb89405aa4df4, type: 2}
-      propertyPath: m_Name
-      value: panSpawner (23)
-      objectReference: {fileID: 0}
     - target: {fileID: 114080643254812252, guid: 43240a291bd93431d95cb89405aa4df4,
         type: 2}
       propertyPath: Target
       value: 
       objectReference: {fileID: 962736980}
+    - target: {fileID: 1625310614352980, guid: 43240a291bd93431d95cb89405aa4df4, type: 2}
+      propertyPath: m_Name
+      value: panSpawner (23)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43240a291bd93431d95cb89405aa4df4, type: 2}
   m_IsPrefabParent: 0
@@ -7771,8 +7771,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 596766999}
-  m_LocalRotation: {x: -0.070688784, y: 0.7060682, z: 0.07119975, w: 0.70100033}
-  m_LocalPosition: {x: 52.11767, y: 0.89440536, z: 1044.5828}
+  m_LocalRotation: {x: 0.048498023, y: 0.9508867, z: 0.23301041, w: -0.19791043}
+  m_LocalPosition: {x: 281.65524, y: -8.188677, z: 1457.8068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11442,6 +11442,11 @@ Prefab:
       propertyPath: Target
       value: 
       objectReference: {fileID: 962736980}
+    - target: {fileID: 65015638535929206, guid: 43240a291bd93431d95cb89405aa4df4,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43240a291bd93431d95cb89405aa4df4, type: 2}
   m_IsPrefabParent: 0
@@ -16264,6 +16269,10 @@ Prefab:
       propertyPath: wayPoints.Array.data[6]
       value: 
       objectReference: {fileID: 375680183}
+    - target: {fileID: 1697220029669772, guid: fb88fc9259b0d614fbfbc01c3e101adb, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb88fc9259b0d614fbfbc01c3e101adb, type: 2}
   m_IsPrefabParent: 0
@@ -16535,8 +16544,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1246016246}
-  m_LocalRotation: {x: -0.09133438, y: 0.90165013, z: 0.35211602, w: 0.23387909}
-  m_LocalPosition: {x: -90.2191, y: 47.127052, z: -229.7052}
+  m_LocalRotation: {x: 0.048498023, y: 0.9508867, z: 0.23301041, w: -0.19791043}
+  m_LocalPosition: {x: 90.66298, y: 106.45687, z: 141.1427}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1211238971}
@@ -18304,7 +18313,7 @@ GameObject:
   - component: {fileID: 1335825253}
   m_Layer: 0
   m_Name: car_fbx
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23841,15 +23850,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 1625310614352980, guid: 43240a291bd93431d95cb89405aa4df4, type: 2}
-      propertyPath: m_Name
-      value: panSpawner (16)
-      objectReference: {fileID: 0}
     - target: {fileID: 114080643254812252, guid: 43240a291bd93431d95cb89405aa4df4,
         type: 2}
       propertyPath: Target
       value: 
       objectReference: {fileID: 962736980}
+    - target: {fileID: 1625310614352980, guid: 43240a291bd93431d95cb89405aa4df4, type: 2}
+      propertyPath: m_Name
+      value: panSpawner (16)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43240a291bd93431d95cb89405aa4df4, type: 2}
   m_IsPrefabParent: 0
@@ -24786,8 +24795,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1822497626}
-  m_LocalRotation: {x: -0.070688784, y: 0.7060682, z: 0.07119975, w: 0.70100033}
-  m_LocalPosition: {x: 52.11767, y: 1.2943993, z: 1044.5828}
+  m_LocalRotation: {x: 0.048498023, y: 0.9508867, z: 0.23301041, w: -0.19791043}
+  m_LocalPosition: {x: 281.65524, y: -7.788683, z: 1457.8068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -27935,7 +27944,7 @@ GameObject:
   - component: {fileID: 2022078297}
   m_Layer: 0
   m_Name: car_fbx
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
