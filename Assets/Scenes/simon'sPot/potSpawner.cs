@@ -17,6 +17,10 @@ public class potSpawner : MonoBehaviour
     float Vy;
     float flightDuration;
     float elapse_time = 0;
+    float delay;
+    float delayTimer;
+    public float upperDelay;
+    public float lowerDelay;
     void Awake()
     {
         myTransform = transform;
@@ -29,7 +33,7 @@ public class potSpawner : MonoBehaviour
 
     }
 
-    void resetPos(){
+    public void resetPos(){
         Projectile.position = myTransform.position + new Vector3(0, 0.0f, 0);
         target_Distance = Vector3.Distance(Projectile.position, Target.position);
         projectile_Velocity = target_Distance / (Mathf.Sin(2 * firingAngle* Mathf.Deg2Rad) / gravity);
@@ -42,7 +46,8 @@ public class potSpawner : MonoBehaviour
         flightDuration = target_Distance / Vx;
 
         Projectile.rotation = Quaternion.LookRotation(Target.position - Projectile.position);
-
+        delay = Random.Range(lowerDelay, upperDelay);
+        delayTimer = 0f;
     }
 
 	
@@ -51,14 +56,20 @@ public class potSpawner : MonoBehaviour
 
     private void Update()
     {
-
-        if(elapse_time > flightDuration){
+        if(delay> delayTimer){
+            transform.GetChild(0).gameObject.SetActive(false);
+            delayTimer += Time.deltaTime;
+            return;
+        }
+        transform.GetChild(0).gameObject.SetActive(true);
+        if(Projectile.transform.position.y < -3f){
             resetPos();
             elapse_time = 0;
         }
         Projectile.Translate(0, (Vy - (gravity * elapse_time)) * Time.deltaTime, Vx * Time.deltaTime);
         elapse_time += Time.deltaTime;
-        Projectile.GetChild(0).transform.rotation *= Quaternion.AngleAxis(10f, Projectile.transform.right);  
+        Projectile.GetChild(0).transform.rotation *= Quaternion.AngleAxis(10f, Projectile.transform.right);
+        Projectile.GetChild(0).transform.rotation *= Quaternion.AngleAxis(10f, Projectile.transform.up);
 
     }
 

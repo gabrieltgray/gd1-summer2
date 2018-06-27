@@ -9,6 +9,7 @@ TagManager:
   - End
   - carAreaBegin
   - Enemy
+  - panSpawner
   layers:
   - Default
   - TransparentFX
