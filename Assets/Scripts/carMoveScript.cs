@@ -34,9 +34,10 @@ public class carMoveScript : MonoBehaviour {
 	{
         if(other.gameObject.tag == "carWaypoint" && other.transform.parent == transform.parent){
             currentWaypoint++;
-            currentWaypoint = currentWaypoint % wayPoints.Count;
-            print(other.transform.parent);
-            print(transform.parent);
+            if(currentWaypoint == wayPoints.Count){
+                Destroy(gameObject);
+            }
+
         }
 
 	}
