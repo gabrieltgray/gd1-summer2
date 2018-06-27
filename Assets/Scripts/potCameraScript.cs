@@ -26,11 +26,17 @@ public class potCameraScript : MonoBehaviour {
         //        potSpawnerList[i].SetActive(false);
         //    }
         //}
-
+        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("panSpawner");
+        for (int i = 0; i < taggedObjects.Length; i++)
+        {
+            taggedObjects[i].GetComponent<potSpawner>().resetPos();
+            taggedObjects[i].SetActive(false);
+        }
             
         for (int i = 0; i < potSpawnerList.Count; i++)
         {
             potSpawnerList[i].SetActive(true);
+            print(potSpawnerList[i].gameObject.name);
             potSpawnerList[i].GetComponent<potSpawner>().resetPos();
         }
 
