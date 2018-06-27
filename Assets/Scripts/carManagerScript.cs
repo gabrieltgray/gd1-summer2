@@ -20,7 +20,11 @@ public class carManagerScript : MonoBehaviour {
 	// Update is called once per frame
 
     void spawnCar(){
+        if(carList.Count ==0){
+            return;
+        }
         int carChosen = Random.Range(0, carList.Count);
+        print(carChosen);
         print(carList[carChosen].transform.position);
         Instantiate(carList[carChosen], carList[carChosen].transform.position, carList[carChosen].transform.rotation);
     }
