@@ -6,9 +6,11 @@ public class carMoveScript : MonoBehaviour {
 
     public List<Transform> wayPoints;
     int currentWaypoint;
+    public Vector3 startPos;
 	// Use this for initialization
 	void Start () {
         currentWaypoint = 0;
+        startPos = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -30,10 +32,11 @@ public class carMoveScript : MonoBehaviour {
     }
 	private void OnTriggerEnter(Collider other)
 	{
-        if(other.gameObject.tag == "carWaypoint"){
+        if(other.gameObject.tag == "carWaypoint" && other.transform.parent == transform.parent){
             currentWaypoint++;
             currentWaypoint = currentWaypoint % wayPoints.Count;
-            print(currentWaypoint);
+            print(other.transform.parent);
+            print(transform.parent);
         }
 
 	}

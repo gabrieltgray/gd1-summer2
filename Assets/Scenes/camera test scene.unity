@@ -979,6 +979,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+        type: 2}
+      propertyPath: carList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4914147418912902, guid: 2ed367c5640ef427c85beb3dd8cdb523, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.18563671
@@ -1015,13 +1020,11 @@ Prefab:
       propertyPath: m_Name
       value: carAreaBegin (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114045141903054306, guid: 2ed367c5640ef427c85beb3dd8cdb523,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1786862410}
-    - target: {fileID: 114045141903054306, guid: 2ed367c5640ef427c85beb3dd8cdb523,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: player
       value: 
       objectReference: {fileID: 1859131115}
@@ -1030,7 +1033,28 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0fb0705f31172b24cbcc0cff7b434c8c, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 4914147418912902, guid: 2ed367c5640ef427c85beb3dd8cdb523, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+        type: 2}
+      propertyPath: maxSpawnTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+        type: 2}
+      propertyPath: carList.Array.data[0]
+      value: 
+      objectReference: {fileID: 1454538559454520, guid: fb88fc9259b0d614fbfbc01c3e101adb,
+        type: 2}
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+        type: 2}
+      propertyPath: carList.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2ed367c5640ef427c85beb3dd8cdb523, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1594367894 stripped
@@ -1045,6 +1069,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+        type: 2}
+      propertyPath: carList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4914147418912902, guid: 2ed367c5640ef427c85beb3dd8cdb523, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.0132049695
@@ -1077,21 +1106,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114045141903054306, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
         type: 2}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 1786862410}
-    - target: {fileID: 114045141903054306, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+      propertyPath: maxSpawnTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
         type: 2}
-      propertyPath: player
+      propertyPath: carList.Array.data[0]
       value: 
-      objectReference: {fileID: 1859131115}
-    - target: {fileID: 23363007492687126, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+      objectReference: {fileID: 1454538559454520, guid: fb88fc9259b0d614fbfbc01c3e101adb,
         type: 2}
-      propertyPath: m_Materials.Array.data[0]
+    - target: {fileID: 114020156230697022, guid: 2ed367c5640ef427c85beb3dd8cdb523,
+        type: 2}
+      propertyPath: carList.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 0fb0705f31172b24cbcc0cff7b434c8c, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ed367c5640ef427c85beb3dd8cdb523, type: 2}
   m_IsPrefabParent: 0
