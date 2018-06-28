@@ -50,7 +50,9 @@ public class thirdPersonCamera : MonoBehaviour {
     void endScript(){
         float moveSpeed = 1f;
         isGrounded = true;
+        rb.velocity = Vector3.zero;
         transform.position = Vector3.MoveTowards(transform.position, endPointTransform.position, moveSpeed);
+
     }
 	void Update () {
         if(isEnd){
