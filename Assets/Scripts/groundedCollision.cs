@@ -13,21 +13,34 @@ public class groundedCollision : MonoBehaviour {
 	void Update () {
 		
 	}
-
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter(Collider other)
 	{
-        transform.parent.GetComponent<thirdPersonCamera>().isGrounded = true;
+        if(other.gameObject.tag != "ground"){
+            transform.parent.GetComponent<thirdPersonCamera>().isGrounded = false;
+        }else{
+            transform.parent.GetComponent<thirdPersonCamera>().isGrounded = true;
+            print("staying");
+        }
 	}
 	private void OnTriggerExit(Collider other)
 	{
-        if(other.gameObject.tag != "potAreaBegin"){
-
+        if (other.gameObject.tag == "ground")
+        {
             transform.parent.GetComponent<thirdPersonCamera>().isGrounded = false;
-
         }
+
+
+
 	}
 	private void OnTriggerStay(Collider other)
 	{
-        transform.parent.GetComponent<thirdPersonCamera>().isGrounded = true;
+        if (other.gameObject.tag != "ground")
+        {
+            transform.parent.GetComponent<thirdPersonCamera>().isGrounded = false;
+        }else{
+            print("staying");
+            transform.parent.GetComponent<thirdPersonCamera>().isGrounded = true;
+        }
+
 	}
 }

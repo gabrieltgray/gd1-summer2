@@ -12,6 +12,7 @@ TagManager:
   - panSpawner
   - water
   - carWaypoint
+  - ground
   layers:
   - Default
   - TransparentFX

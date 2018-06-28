@@ -18,7 +18,7 @@ public class thirdPersonCamera : MonoBehaviour {
     public Vector3 frontMovement;
     public Vector3 rightMovement;
 
-    public bool isGrounded;
+    public bool isGrounded = false;
     private Vector3 yMovement;
     Vector3 initialOffset;
     public bool potCam = false;
@@ -31,9 +31,11 @@ public class thirdPersonCamera : MonoBehaviour {
     Quaternion initRot;
     Vector3 initOffset = Vector3.zero;
     public bool keyDownForJump = false;
+    private bool isEnd = false;
+    public Transform endPointTransform;
 	// Use this for initialization
 	void Start () {
-        isGrounded = true;
+        isGrounded = false;
         rb = GetComponent<Rigidbody>();
         initialOffset = offset;
         defaultOffset = offset;
@@ -44,31 +46,26 @@ public class thirdPersonCamera : MonoBehaviour {
     }
 	
 	// Update is called once per frame
+
+    void endScript(){
+        float moveSpeed = 1f;
+        isGrounded = true;
+        transform.position = Vector3.MoveTowards(transform.position, endPointTransform.position, moveSpeed);
+    }
 	void Update () {
+        if(isEnd){
+            endScript();
+            return;
+        }
         yMovement = new Vector3(0f, rb.velocity.y, 0f);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             keyDownForJump = true;
-            Transform[] childTransforms = transform.GetComponentsInChildren<Transform>();
-            for (int i = 0; i < childTransforms.Length; i++)
-            {
-                if(childTransforms[i].gameObject.name != "Waist"){
-                    continue;
-                }
-                childTransforms[i].position -= new Vector3(0f, 1f, 0f);
-            }
+
         }
         if (Input.GetKeyUp(KeyCode.Space) && isGrounded)
         {
-            Transform[] childTransforms = transform.GetComponentsInChildren<Transform>();
-            for (int i = 0; i < childTransforms.Length; i++)
-            {
-                if (childTransforms[i].gameObject.name == "Sphere")
-                {
-                    continue;
-                }
-                childTransforms[i].position += new Vector3(0f, 1f, 0f);
-            }
+            
             isGrounded = false;
             keyDownForJump = false;
 
@@ -80,6 +77,10 @@ public class thirdPersonCamera : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
+        if (isEnd)
+        {
+            return;
+        }
         initRot = transform.rotation;
         Vector3 movementVec = new Vector3(Input.GetAxis("Horizontal") * speed, 0f, Input.GetAxis("Vertical")*speed);
         //transform.eulerAngles = new Vector3(0f, mainCamera.transform.eulerAngles.y, 0f);
@@ -135,7 +136,6 @@ public class thirdPersonCamera : MonoBehaviour {
             goalCam = !goalCam;
             //pressing l brings you back to regular
             if(!goalCam){
-                print("transform.rotation after: " + transform.rotation.eulerAngles);
                 initialOffset = initOffset;
                 offset = initOffset;
 
@@ -179,7 +179,6 @@ public class thirdPersonCamera : MonoBehaviour {
         {
             taggedObjects[i].GetComponent<carManagerScript>().activateSpawner = false;
         }
-        print("deactivate cars");
     }
     private void OnTriggerEnter(Collider other)
 	{
@@ -226,9 +225,11 @@ public class thirdPersonCamera : MonoBehaviour {
             carCam = true;
             initialOffset = offset * cameraMod;
         }
+        if(other.gameObject.tag == "End"){
+            isEnd = true;
+        }
         if (!potCam)
         {
-            print("deactivating pots...");
             deactivatePots();
         }
         if(!carCam){

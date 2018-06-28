@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 64996045131955138}
   m_Layer: 0
   m_Name: RoadA
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 127
