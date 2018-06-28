@@ -21,21 +21,28 @@ public class potSpawner : MonoBehaviour
     float delayTimer;
     public float upperDelay;
     public float lowerDelay;
+    Rigidbody rb;
     void Awake()
     {
         myTransform = transform;
+        rb = Target.gameObject.GetComponent<Rigidbody>();
     }
 
     void Start()
+
     {
+        
+        print(rb);
         resetPos();
 
 
     }
 
     public void resetPos(){
+
+        Vector3 actualTarget = Target.position + (Target.forward * rb.velocity.z * 2f) + (Target.right * rb.velocity.x * 1f);
         Projectile.position = myTransform.position + new Vector3(0, 0.0f, 0);
-        target_Distance = Vector3.Distance(Projectile.position, Target.position);
+        target_Distance = Vector3.Distance(Projectile.position, actualTarget);
         projectile_Velocity = target_Distance / (Mathf.Sin(2 * firingAngle* Mathf.Deg2Rad) / gravity);
 
             // Extract the X  Y componenent of the velocity
@@ -45,7 +52,7 @@ public class potSpawner : MonoBehaviour
         // Calculate flight time.
         flightDuration = target_Distance / Vx;
 
-        Projectile.rotation = Quaternion.LookRotation(Target.position - Projectile.position);
+        Projectile.rotation = Quaternion.LookRotation(actualTarget - Projectile.position);
         delay = Random.Range(lowerDelay, upperDelay);
         delayTimer = 0f;
     }

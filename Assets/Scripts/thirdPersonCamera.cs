@@ -124,11 +124,14 @@ public class thirdPersonCamera : MonoBehaviour {
         //need to multiply by offset so it returns a vector3
         //multiplying a quaternion by a vector 3 is actually just applying the rotation to the vector3
 
-        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * offset;
+        if(!goalCam){
+            offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * offset;
 
 
-        initialOffset = (Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * initialOffset);
+            initialOffset = (Quaternion.AngleAxis(Input.GetAxis("Mouse X") * cursorSpeed, Vector3.up) * initialOffset);
 
+
+        }
 
 
 

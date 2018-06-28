@@ -375,6 +375,11 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 114967913493932858, guid: 2a62cadaa19264337967e5baa73fd770,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a62cadaa19264337967e5baa73fd770, type: 2}
   m_IsPrefabParent: 0
@@ -594,7 +599,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4921614693094068, guid: 6e876011add734f27863826b56bf4922, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.044638995
+      value: -31.1
       objectReference: {fileID: 0}
     - target: {fileID: 4921614693094068, guid: 6e876011add734f27863826b56bf4922, type: 2}
       propertyPath: m_LocalPosition.y
@@ -668,6 +673,11 @@ Prefab:
       propertyPath: potSpawnerList.Array.data[5]
       value: 
       objectReference: {fileID: 1594367894}
+    - target: {fileID: 23352447497401724, guid: 6e876011add734f27863826b56bf4922,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e876011add734f27863826b56bf4922, type: 2}
   m_IsPrefabParent: 0
@@ -818,6 +828,10 @@ Prefab:
       propertyPath: potSpawnerList.Array.data[5]
       value: 
       objectReference: {fileID: 1594367894}
+    - target: {fileID: 1168641999980380, guid: 6e876011add734f27863826b56bf4922, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e876011add734f27863826b56bf4922, type: 2}
   m_IsPrefabParent: 0
@@ -1347,6 +1361,11 @@ Prefab:
       propertyPath: potSpawnerList.Array.data[5]
       value: 
       objectReference: {fileID: 1594367894}
+    - target: {fileID: 23352447497401724, guid: 6e876011add734f27863826b56bf4922,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e876011add734f27863826b56bf4922, type: 2}
   m_IsPrefabParent: 0
@@ -1563,6 +1582,10 @@ Prefab:
     - target: {fileID: 1168641999980380, guid: 6e876011add734f27863826b56bf4922, type: 2}
       propertyPath: m_Name
       value: potAreaBegin (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168641999980380, guid: 6e876011add734f27863826b56bf4922, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e876011add734f27863826b56bf4922, type: 2}

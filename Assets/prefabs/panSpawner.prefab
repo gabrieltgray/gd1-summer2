@@ -171,4 +171,4 @@ MonoBehaviour:
   gravity: 20
   Projectile: {fileID: 4928463734787012}
   upperDelay: 1
-  lowerDelay: 0.1
+  lowerDelay: 0.3
